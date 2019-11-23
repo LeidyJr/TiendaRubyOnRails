@@ -15,9 +15,14 @@
         <%= @product.quantity %>
       </p>
       <h3>
-        <%= link_to 'Comprar', purchase_product_path(@product),
-                    class: 'btn btn-lg btn-success'%>
+        <% if @product.quantity > 0 %>
+            <%= link_to 'Comprar', purchase_product_path(@product), class: 'btn btn-lg btn-success' %>
+        <% else %>
+            <%= link_to 'Lo lamentamos, se han acabado las unidades disponibles', products_path, style: "color:blue" %>
+        <% end %>
       </h3>
+
+      
       <h3>
           <%= link_to 'Regresar a productos', products_path, class: 'btn btn-lg btn-info' %>
       </h3>

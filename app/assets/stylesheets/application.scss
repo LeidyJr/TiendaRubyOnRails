@@ -5,9 +5,13 @@
 @import "scaffolds";
 
 .navbar-default {
-  background-color: #d3360b;
+  background-color: #F8ADB5;
   a {
     color: white !important;
+  }
+  a:hover{
+    padding: 50px;
+    transition: transform .2s;
   }
   .navbar-brand {
     font-size: 24px;
